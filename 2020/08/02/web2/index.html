@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="xiaoyu"><title>网页设计/css · 小鱼博客</title><meta name="description" content="响应式网页设计原则：创建媒体查询媒体查询是CSS3中引入的一项新技术，可根据不同的视口大小更改内容的表示形式。视口是用户在网页上的可见区域，视用于访问站点的设备而异。
+媒体查询由一种媒体类型组成，如果该媒体类型与显示文档的设备类型匹配，则将应用样式。您可以在媒体查询中根据需要选择任意多个选择器和样式"><meta name="keywords" content="记录学习生活"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小鱼博客</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"><li><a href="https://github.com/leewei0923" target="_blank" rel="noopener"><i class="fa fa-github"></i></a></li><li><a href="2955538482@qq.com"><i class="fa fa-envelope"></i></a></li><li><a href="https://sighttp.qq.com/authd?IDKEY=2955538482" target="_blank" rel="noopener"><i class="fa fa-qq"></i></a></li><li><a href="https://www.7miaoyu.com" target="_blank" rel="noopener"><i class="fa fa-mortar-board"></i></a></li></ul><div class="footer"><div class="p"> <span>© 2020 </span><i class="fa fa-star"></i><span> xiaoyu</span><span> 冰新未来</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core.  </a><a href="http://www.beian.miit.gov.cn/" target="_blank">&nbsp;皖ICP备20004665号-2</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">友链</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>网页设计/css</a></h3></div><div class="post-content"><h2 id="响应式网页设计原则：创建媒体查询"><a href="#响应式网页设计原则：创建媒体查询" class="headerlink" title="响应式网页设计原则：创建媒体查询"></a>响应式网页设计原则：创建媒体查询</h2><p>媒体查询是CSS3中引入的一项新技术，可根据不同的视口大小更改内容的表示形式。视口是用户在网页上的可见区域，视用于访问站点的设备而异。</p>
+<p>媒体查询由一种媒体类型组成，如果该媒体类型与显示文档的设备类型匹配，则将应用样式。您可以在媒体查询中根据需要选择任意多个选择器和样式。</p>
+<p>以下是媒体查询的示例，该查询在设备的宽度小于或等于100px时返回内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 100px) &#123; &#x2F;* CSS Rules *&#x2F; &#125;</span><br></pre></td></tr></table></figure>
+<p>当设备的高度大于或等于350px时，以下媒体查询将返回内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media (min-height: 350px) &#123; &#x2F;* CSS Rules *&#x2F; &#125;</span><br></pre></td></tr></table></figure>
+<p>** 请记住，仅当媒体类型与所使用设备的媒体类型匹配时，才会应用媒体查询中的CSS。**</p>
+<p>例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">  <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="comment">/* Only change code below this line */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-height:</span> <span class="number">800px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/* CSS Rules */</span> </span><br><span class="line">  <span class="comment">/* Only change code above this line */</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="自适应网页设计原则：使图像具有响应性"><a href="#自适应网页设计原则：使图像具有响应性" class="headerlink" title="自适应网页设计原则：使图像具有响应性"></a>自适应网页设计原则：使图像具有响应性</h3><p>使用CSS使图像具有响应性实际上非常简单。您只需要向图像添加以下属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">img &#123;</span><br><span class="line">  max-width: 100%;</span><br><span class="line">  height: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>max-width的100%将确保图像不会比它在容器更宽，而height中auto将会使图像保持其原始宽高比。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.responsive-img &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  max-width: 100%;</span><br><span class="line">  height:auto;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="响应式Web设计原则：使用视网膜图像进行高分辨率显示"><a href="#响应式Web设计原则：使用视网膜图像进行高分辨率显示" class="headerlink" title="响应式Web设计原则：使用视网膜图像进行高分辨率显示"></a>响应式Web设计原则：使用视网膜图像进行高分辨率显示</h3><p>随着互联网连接设备的增加，它们的尺寸和规格也有所不同，并且它们使用的显示器在内部和外部可能会有所不同。像素密度是一个设备上可能与其他设备不同的方面，这种密度称为“像素每英寸（PPI）”或“每英寸点数（DPI）”。最著名的显示器就是最新的Apple MacBook Pro笔记本电脑和最近的iMac电脑上的“视网膜显示器”。由于“视网膜”和“非视网膜”显示器之间的像素密度不同，因此某些未考虑高分辨率显示器的图像在高分辨率显示器上渲染时可能看起来“像素化”。</p>
+<p>使图像正确显示在高分辨率显示器（例如MacBook Pro“视网膜显示器”）上的最简单方法是将其width和height值定义为原始文件的一半。这是仅使用原始高度和宽度一半的图像的示例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">  <span class="selector-tag">img</span> &#123; <span class="attribute">height</span>: <span class="number">250px</span>; <span class="attribute">width</span>: <span class="number">250px</span>; &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;img src="coolPic500x500" alt="A most excellent picture"&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="响应式网页设计原则：使版式具有响应性"><a href="#响应式网页设计原则：使版式具有响应性" class="headerlink" title="响应式网页设计原则：使版式具有响应性"></a>响应式网页设计原则：使版式具有响应性</h3><p>您可以使用视口单位进行响应式排版，而不必使用文本em或不px调整文本大小。视口单位（如百分比）是相对单位，但它们基于不同的项目。视口单位是相对于设备的视口尺寸（宽度或高度），而百分比是相对于父容器元素的大小。</p>
+<p>四个不同的视口单位是：</p>
+<p>vw（视口宽度）：10vw将为视口宽度的10％。<br>vh（视口高度）：3vh将为视口高度的3％。<br>vmin（最小视口）：70vmin将是视口较小尺寸（高度或宽度）的70％。<br>vmax（最大视口）：100vmax将是视口较大尺寸（高度或宽度）的100％。<br>这是一个将body标签设置为视口宽度的30％的示例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body &#123; width: 30vw; &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS-Flexbox：使用显示：flex定位两个框"><a href="#CSS-Flexbox：使用显示：flex定位两个框" class="headerlink" title="CSS Flexbox：使用显示：flex定位两个框"></a>CSS Flexbox：使用显示：flex定位两个框</h2><p>本节使用交替的质询样式来说明如何使用CSS灵活地放置元素。首先，挑战将解释理论，然后使用简单的tweet组件进行实际挑战将应用flexbox概念。</p>
+<p>将CSS属性display: flex;放在元素上可让您使用其他flex属性来构建响应页面。</p>
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<h3 id="CSS-Flexbox：在Tweet嵌入中添加Flex超级功能"><a href="#CSS-Flexbox：在Tweet嵌入中添加Flex超级功能" class="headerlink" title="CSS Flexbox：在Tweet嵌入中添加Flex超级功能"></a>CSS Flexbox：在Tweet嵌入中添加Flex超级功能</h3><p>右侧是将用作实际示例的推特嵌入。在不同布局下，某些元素看起来会更好。最后的挑战证明了display: flex。在这里，您将把它添加到嵌入的推文中的几个组件中，以开始调整其位置。</p>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  header {
+
+  }
+  header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  header .profile-name {
+
+    margin-left: 10px;
+  }
+  header .follow-btn {
+
+    margin: 0 0 0 auto;
+  }
+  header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  header h3, header h4 {
+
+    margin: 0;
+  }
+  #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  footer {
+
+  }
+  footer .stats {
+
+    font-size: 15px;
+  }
+  footer .stats strong {
+    font-size: 18px;
+  }
+  footer .stats .likes {
+    margin-left: 10px;
+  }
+  footer .cta {
+    margin-left: auto;
+  }
+  footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+</style>
+<header>
+  <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+  <div class="profile-name">
+    <h3>Quincy Larson</h3>
+    <h4>@ossia</h4>
+  </div>
+  <div class="follow-btn">
+    <button>Follow</button>
+  </div>
+</header>
+<div id="inner">
+  <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+  <span class="date">1:32 PM - 12 Jan 2018</span>
+  <hr>
+</div>
+<footer>
+  <div class="stats">
+    <div class="Retweets">
+      <strong>107</strong> Retweets
+    </div>
+    <div class="likes">
+      <strong>431</strong> Likes
+    </div>
+  </div>
+  <div class="cta">
+    <button class="share-btn">Share</button>
+    <button class="retweet-btn">Retweet</button>
+    <button class="like-btn">Like</button>
+  </div>
+</footer>
+
+<hr>
+<h2 id="CSS-Flexbox：使用flex-direction属性创建一行"><a href="#CSS-Flexbox：使用flex-direction属性创建一行" class="headerlink" title="CSS Flexbox：使用flex-direction属性创建一行"></a>CSS Flexbox：使用flex-direction属性创建一行</h2><p>添加display: flex到元素会将其变成flex容器。这样就可以将该元素的所有子元素对齐到行或列中。通过将flex-direction属性添加到父项并将其设置为行或列来执行此操作。创建一行将使子代水平对齐，创建一列将使子代垂直对齐。</p>
+<p>其他选项为flex-direction行反向和列反向。</p>
+<p>注意：该flex-direction属性的默认值为row。</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-08-02</span><i class="fa fa-tag"></i><a class="tag" href="/tags/响应式设计/" title="响应式设计">响应式设计 </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2020/08/02/web2/,小鱼博客,网页设计/css,;" target="_blank" rel="noopener"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2020/08/11/gird/" title="网页设计/gird布局">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2020/07/29/css/" title="html/css">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'',
+  app_key:'',
+  placeholder:'念念不忘，必有回响...',
+  path: window.location.pathname,
+  serverURLs: '',
+  visitor:false,
+  recordIP:true,
+  avatar:'mp'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
