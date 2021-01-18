@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="xiaoyu"><title>用CSS让DIV上下左右居中的方法 · 云边的鸟</title><meta name="description" content="方法一（varticle-align）理念
+利用表格单元格的居中属性。
+步骤
+
+父div外层配置一个div，同时设置为表格元素 (display: table)，宽度为100%
+
+父div配置为表格单元格元素 (display: table-cell)
+
+父div配置居中属性（vertical-al"><meta name="keywords" content="记录学习生活"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">云边的鸟</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"><li><a href="https://github.com/leewei0923" target="_blank" rel="noopener"><i class="fa fa-github"></i></a></li><li><a href="2955538482@qq.com"><i class="fa fa-envelope"></i></a></li><li><a href="https://sighttp.qq.com/authd?IDKEY=2955538482" target="_blank" rel="noopener"><i class="fa fa-qq"></i></a></li><li><a href="https://www.7miaoyu.com" target="_blank" rel="noopener"><i class="fa fa-mortar-board"></i></a></li></ul><div class="footer"><div class="p"> <span>© 2020 </span><i class="fa fa-star"></i><span> xiaoyu</span><span> 冰新未来</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core.  </a><a href="http://www.beian.miit.gov.cn/" target="_blank">&nbsp;皖ICP备20004665号-2</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">友链</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>用CSS让DIV上下左右居中的方法</a></h3></div><div class="post-content"><h2 id="方法一（varticle-align）"><a href="#方法一（varticle-align）" class="headerlink" title="方法一（varticle-align）"></a>方法一（varticle-align）</h2><p>理念</p>
+<p>利用表格单元格的居中属性。</p>
+<p>步骤</p>
+<ul>
+<li><p>父div外层配置一个div，同时设置为表格元素 (display: table)，宽度为100%</p>
+</li>
+<li><p>父div配置为表格单元格元素 (display: table-cell)</p>
+</li>
+<li><p>父div配置居中属性（vertical-align: middle），使子div上下居中</p>
+</li>
+<li><p>子div通过margin配置左右居中（margin-left:auto; margin-right:auto）</p>
+</li>
+</ul>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.table</span> &#123;<span class="attribute">display</span>: table; <span class="attribute">width</span>: <span class="number">100%</span>;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">display</span>: table-cell; <span class="attribute">vertical-align</span>: middle;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123;<span class="attribute">margin</span>: auto;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="table" &gt;</span><br><span class="line">        &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">            &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>注：表格单元格比较特殊，如果只有一个单元格时，它的宽度默认会占父级（table|tr）宽度的100%;</p>
+<p>table默认宽度不会撑开，需要手动配置width:100%；</p>
+<h2 id="方法二（line-height）"><a href="#方法二（line-height）" class="headerlink" title="方法二（line-height）"></a>方法二（line-height）</h2><p>理念</p>
+<p>当父div的行高等于自身高度时，内部的行内元素会上下居中显示。行内块没有固定高度时也会上下居中显示。通过文本居中属性text-align:center,可以使内部行内元素或行内块元素左右居中显示。</p>
+<p>步骤</p>
+<ul>
+<li><p>子div设定为行内块元素(display:inline-block)；</p>
+</li>
+<li><p>父div设置行高(line-height)使子div上下居中</p>
+</li>
+<li><p>父div设置文本居中(text-align:center)使子div左右居中。</p>
+</li>
+</ul>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">line-height</span>: <span class="number">500px</span>; <span class="attribute">text-align</span>: center; <span class="attribute">font-size</span>: <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123; <span class="attribute">display</span>: inline-block;</span><br><span class="line">        <span class="comment">/* display: inline-flex;</span></span><br><span class="line"><span class="comment">        display: inline-grid;</span></span><br><span class="line"><span class="comment">        display: inline-table; */</span></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">        &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>注： 行高如果设置为当前父div的高度(400px)的话，有固定高度的子div并不会居中显示的，问题出在浏览器默认将其当做文本居中的，即把它当做了一段文本（chrome默认font-size:16px;hight:21px）进行居中，没把它当做高度100px进行居中。所以需要对父div的line-height进行调整。以font-size:0（对应的字体高度为0）为例子，则需要line-height增加一个子div的高度（400px + 100px;）。</p>
+<h2 id="方法三（绝对定位）"><a href="#方法三（绝对定位）" class="headerlink" title="方法三（绝对定位）"></a>方法三（绝对定位）</h2><p>理念利用定位属性（top、left、right、bottom）百分比的模式。若为100%，则代表偏移的长度为父div的高度（宽度）的100%。</p>
+<p>步骤</p>
+<ul>
+<li><p>父div标记下定位（position:relative|absolute|fixed）;子div绝对定位（position:absolute）</p>
+</li>
+<li><p>子div上下居中：top:50%;margin-top:-h/2; 或是 bottom:50%;margin-bottom:-h/2;；</p>
+</li>
+<li><p>子div左右居中: left:50%;margin-left:-w/2 或是 right:50%;margin-right:-w/2；</p>
+</li>
+</ul>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">position</span>: relative;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123;<span class="attribute">position</span>: absolute;<span class="attribute">bottom</span>:<span class="number">50%</span>;<span class="attribute">margin-bottom</span>: -<span class="number">50px</span>;<span class="attribute">left</span>: <span class="number">50%</span>;<span class="attribute">margin-left</span>: -<span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">        &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法四（绝对定位）"><a href="#方法四（绝对定位）" class="headerlink" title="方法四（绝对定位）"></a>方法四（绝对定位）</h2><p>理念：</p>
+<p>定位属性top和bottom（或是left和right）值分别设置为0，但子div有固定高度（宽度），并不能达到上下（左右）间距为0，此时给子div设置margin:auto会使它居中显示。</p>
+<p>步骤：</p>
+<ul>
+<li><p>父div标记下定位（position:relative|absolute|fixed|sticky）;子div绝对定位（position:absolute）</p>
+</li>
+<li><p>子div上下居中：top:0;bottom:0;margin-top:auto;margin-bottom:auto</p>
+</li>
+<li><p>子div左右居中：left:0;right:0;margin-left:auto;margin-right:auto</p>
+</li>
+</ul>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">position</span>: relative;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123;<span class="attribute">position</span>: absolute; <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">bottom</span>:<span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; <span class="attribute">right</span>: <span class="number">0</span>; <span class="attribute">margin</span>: auto&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">        &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="方法五（flex）"><a href="#方法五（flex）" class="headerlink" title="方法五（flex）"></a>方法五（flex）</h2><p>理念</p>
+<p>弹性盒子中只要给弹性子元素设置 margin: auto; 可以使得弹性子元素上下左右居中。</p>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">display</span>: flex;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123;<span class="attribute">margin</span>: auto&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">        &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>注：flex存在兼容性问题</p>
+<p> 方法六（相对定位）</p>
+<p>理念</p>
+<p>利用定位属性（top、left、right、bottom）百分比的模式。若为100%，则代表偏移的长度为父div的高度（宽度）的100%。</p>
+<p>步骤</p>
+<ul>
+<li><p>父div标记下定位（position:relative|absolute|fixed）;子div相对定位（position:relative）</p>
+</li>
+<li><p>子div上下居中：top:50%;margin-top:-h/2; 或是 bottom:-50%;margin-top:-h/2;；</p>
+</li>
+<li><p>子div左右居中: left:50%;margin-left:-w/2 或是 right:-50%;margin-left:-w/2；</p>
+</li>
+</ul>
+<p>例子</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;<span class="attribute">margin</span>: <span class="number">0</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">box-sizing</span>: border-box;&#125;</span><br><span class="line">    <span class="selector-class">.father</span> &#123;<span class="attribute">position</span>: relative;&#125;</span><br><span class="line">    <span class="selector-class">.son</span> &#123;<span class="attribute">position</span>: relative; <span class="attribute">top</span>:<span class="number">50%</span>;<span class="attribute">margin-top</span>:-<span class="number">50px</span>;<span class="attribute">left</span>:<span class="number">50%</span>;<span class="attribute">margin-left</span>:-<span class="number">50px</span>&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class="father" style="width: 100%; height: 400px; border: 1px solid rebeccapurple;"&gt;</span><br><span class="line">        &lt;div class="son" style="width: 100px; height: 100px;background: palegreen;"&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>注：</p>
+<p>与绝对定位不同的是，定位属性相对的点是自身元素的左上角。（所以bottom是负值，和方法三绝对定位写法有不一样的地方）</p>
+<p>如果有同级元素，可能会受到影响。</p>
+<p>如果子div是浮动元素，也有居中效果。</p>
+<p>结尾</p>
+<p>方法二和方法三兼容性要比其它好些。最简单的是弹性盒子。</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css"></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-01-18</span><i class="fa fa-tag"></i><a class="tag" href="/tags/网页设计/" title="网页设计">网页设计 </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2021/01/18/css3/,云边的鸟,用CSS让DIV上下左右居中的方法,;" target="_blank" rel="noopener"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2020/12/15/css1/" title="CSS基础学习">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'',
+  app_key:'',
+  placeholder:'念念不忘，必有回响...',
+  path: window.location.pathname,
+  serverURLs: '',
+  visitor:false,
+  recordIP:true,
+  avatar:'mp'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
