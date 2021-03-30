@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      630 字
+      620 字
     </span>
   
 
@@ -244,12 +244,12 @@
 <p>继date主题之后，HTML5还引入了time元素以及datetime用于标准化时间的属性。这是一个内联元素，可以在页面上包装日期或时间。该datetime属性保留该日期的有效格式。这是辅助设备访问的值。通过声明时间的标准化版本，即使在文本中以非正式或口语的方式编写，它也有助于避免混淆。</p>
 <h3 id="应用的辅助功能：使用tabindex将键盘焦点添加到元素"><a href="#应用的辅助功能：使用tabindex将键盘焦点添加到元素" class="headerlink" title="应用的辅助功能：使用tabindex将键盘焦点添加到元素"></a>应用的辅助功能：使用tabindex将键盘焦点添加到元素</h3><p>HTML tabindex属性具有与元素的键盘焦点有关的三个不同的功能。当它在标签上时，表示该元素可以被关注。值（正，负或零的整数）确定行为。</p>
 <p>当用户浏览页面时，某些元素（例如链接和表单控件）会自动获得键盘焦点。它与HTML源标记中的元素顺序相同。这个相同的功能可以提供给其他元件，诸如div，span，和p，通过将tabindex=”0”属性上它们。这是一个例子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span>&gt;</span>I need keyboard focus!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>I need keyboard focus!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>**  注意：负值tabindex（通常为-1）表示该元素是可聚焦的，但无法通过键盘到达。这种方法通常用于以编程方式将焦点移到内容上（例如当div用于弹出窗口的激活时），并且超出了这些挑战的范围。 **</p>
 <h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><h3 id="响应式网页设计原则：创建媒体查询"><a href="#响应式网页设计原则：创建媒体查询" class="headerlink" title="响应式网页设计原则：创建媒体查询"></a>响应式网页设计原则：创建媒体查询</h3><p>媒体查询是CSS3中引入的一项新技术，可根据不同的视口大小更改内容的表示形式。视口是用户在网页上的可见区域，视用于访问站点的设备而异。</p>
 <p>媒体查询由一种媒体类型组成，如果该媒体类型与显示文档的设备类型匹配，则将应用样式。您可以在媒体查询中根据需要选择任意多个选择器和样式。</p>
 <p>以下是媒体查询的示例，该查询在设备的宽度小于或等于100px时返回内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 100px) &#123; &#x2F;* CSS Rules *&#x2F; &#125;</span><br><span class="line">&#96;&#96;&#96;css</span><br><span class="line"></span><br><span class="line">当设备的高度大于或等于350px时，以下媒体查询将返回内容：</span><br><span class="line">&#96;&#96;&#96;css</span><br><span class="line">@media (min-height: 350px) &#123; &#x2F;* CSS Rules *&#x2F; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mel">@media (<span class="hljs-keyword">max</span>-width: <span class="hljs-number">100</span>px) &#123; <span class="hljs-comment">/* CSS Rules */</span> &#125;<br><span class="hljs-string">``</span><span class="hljs-string">`css</span><br><span class="hljs-string"></span><br><span class="hljs-string">当设备的高度大于或等于350px时，以下媒体查询将返回内容：</span><br><span class="hljs-string">`</span><span class="hljs-string">``</span>css<br>@media (<span class="hljs-keyword">min</span>-height: <span class="hljs-number">350</span>px) &#123; <span class="hljs-comment">/* CSS Rules */</span> &#125;<br></code></pre></td></tr></table></figure>
 <p>请记住，仅当媒体类型与所使用设备的媒体类型匹配时，才会应用媒体查询中的CSS。</p>
 
             </div>

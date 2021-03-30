@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      429 字
+      423 字
     </span>
   
 
@@ -242,9 +242,9 @@
             <div class="markdown-body">
               <h2 id="引用本地字库"><a href="#引用本地字库" class="headerlink" title="引用本地字库"></a>引用本地字库</h2><a id="more"></a>
 <p>css 代码：自定义字体</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;  font-family: &#39;MyFont&#39;;&#x2F;*字体名称*&#x2F;  src: url(&#39;font.ttf&#39;); &#x2F;*字体源文件*&#x2F;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@font-face</span> &#123;  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&#x27;MyFont&#x27;</span>;<span class="hljs-comment">/*字体名称*/</span>  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&#x27;font.ttf&#x27;</span>); <span class="hljs-comment">/*字体源文件*/</span>&#125;<br></code></pre></td></tr></table></figure>
 <p>然后在定义就可以了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.text&#123;    font-family: MyFont; &#x2F;*刚刚定义的字体名称*&#x2F;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.text</span>&#123;    <span class="hljs-attribute">font-family</span>: MyFont; <span class="hljs-comment">/*刚刚定义的字体名称*/</span>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="postition理解"><a href="#postition理解" class="headerlink" title="postition理解"></a>postition理解</h2><table>
 <thead>
 <tr>
@@ -261,7 +261,7 @@
 <h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>这个简写属性设置一个元素所有外边距的宽度，或者设置各边上外边距的宽度。</p>
 <p>块级元素的垂直相邻外边距会合并，而行内元素实际上不占上下外边距。行内元素的的左右外边距不会合并。同样地，浮动元素的外边距也不会合并。允许指定负的外边距值，不过使用时要小心。</p>
 <p>例1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin:10px 5px 15px 20px;</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">margin</span>:<span class="hljs-number">10</span>px <span class="hljs-number">5</span>px <span class="hljs-number">15</span>px <span class="hljs-number">20</span>px;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>上外边距是 10px</li>
 <li>右外边距是 5px</li>
@@ -269,14 +269,14 @@
 <li>左外边距是 20px</li>
 </ul>
 <p>例2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin:10px 5px 15px;</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">margin</span>:<span class="hljs-number">10</span>px <span class="hljs-number">5</span>px <span class="hljs-number">15</span>px;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>上外边距是 10px</li>
 <li>右外边距和左外边距是 5px</li>
 <li>下外边距是 15px</li>
 </ul>
 <p>例3：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin:10px 5px;</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">margin</span>:<span class="hljs-number">10</span>px <span class="hljs-number">5</span>px;<br></code></pre></td></tr></table></figure>
 <ul>
 <li>上外边距和下外边距是 10px</li>
 <li>右外边距和左外边距是 5px</li>

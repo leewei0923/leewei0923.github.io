@@ -242,7 +242,7 @@
             <div class="markdown-body">
               <h2 id="CSS网格：使用grid-template-columns添加列"><a href="#CSS网格：使用grid-template-columns添加列" class="headerlink" title="CSS网格：使用grid-template-columns添加列"></a>CSS网格：使用grid-template-columns添加列</h2><a id="more"></a>
 <p>仅仅创建一个网格元素并不会使您走得太远。您还需要定义网格的结构。要将某些列添加到网格，请使用grid-template-columns网格容器上的属性，如下所示：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">50px</span> <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.container</span> &#123;<br>  <span class="hljs-attribute">display</span>: grid;<br>  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">50px</span> <span class="hljs-number">50px</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>这将为您的网格提供两列，每列分别为50px宽。赋予grid-template-columns属性的参数数量表示网格中的列数，每个参数的值表示每列的宽度。</p>
 <hr>
 <h2 id="CSS网格：使用grid-template-rows添加行"><a href="#CSS网格：使用grid-template-rows添加行" class="headerlink" title="CSS网格：使用grid-template-rows添加行"></a>CSS网格：使用grid-template-rows添加行</h2><p>您在上一个挑战中创建的网格将自动设置行数。要手动调整行，grid-template-rows请以grid-template-columns与上一个挑战相同的方式使用该属性。</p>
@@ -280,7 +280,7 @@
 <p>auto：自动将列或行设置为其内容的宽度或高度，</p>
 <p>%：将列或行调整为容器宽度的百分比。</p>
 <p>这是在预览中生成输出的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grid-template-columns: auto 50px 10% 2fr 1fr;</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">grid</span>-template-columns: auto <span class="hljs-number">50</span>px <span class="hljs-number">10</span>% <span class="hljs-number">2</span>fr <span class="hljs-number">1</span>fr;<br></code></pre></td></tr></table></figure>
 <p>此代码段创建了五列。第一列与其内容一样宽，第二列为50px，第三列为容器的10％，最后两列为它的容器；剩余的空间分为三部分，第二列分配两个空间，第五列分配一个空间。</p>
 
             </div>
