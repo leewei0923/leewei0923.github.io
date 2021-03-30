@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>R语言 | 云边的鸟</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录学习新技术的博客笔记">
+    
+    <link rel="preload" href="/flybird/assets/css/0.styles.c373855a.css" as="style"><link rel="preload" href="/flybird/assets/js/app.cce8d3ec.js" as="script"><link rel="preload" href="/flybird/assets/js/2.e60e2e84.js" as="script"><link rel="preload" href="/flybird/assets/js/22.3002f630.js" as="script"><link rel="prefetch" href="/flybird/assets/js/10.ecf47c4e.js"><link rel="prefetch" href="/flybird/assets/js/11.64c4b41d.js"><link rel="prefetch" href="/flybird/assets/js/12.d32978c7.js"><link rel="prefetch" href="/flybird/assets/js/13.9400a2f2.js"><link rel="prefetch" href="/flybird/assets/js/14.078b54f6.js"><link rel="prefetch" href="/flybird/assets/js/15.19dbba4a.js"><link rel="prefetch" href="/flybird/assets/js/16.4930a008.js"><link rel="prefetch" href="/flybird/assets/js/17.c70f1bc7.js"><link rel="prefetch" href="/flybird/assets/js/18.6e8a6dfa.js"><link rel="prefetch" href="/flybird/assets/js/19.6ecb346e.js"><link rel="prefetch" href="/flybird/assets/js/20.cd823d1e.js"><link rel="prefetch" href="/flybird/assets/js/21.851c0b41.js"><link rel="prefetch" href="/flybird/assets/js/3.d3e1f837.js"><link rel="prefetch" href="/flybird/assets/js/4.8c4a9ffe.js"><link rel="prefetch" href="/flybird/assets/js/5.df2d1880.js"><link rel="prefetch" href="/flybird/assets/js/6.c8b7a84a.js"><link rel="prefetch" href="/flybird/assets/js/7.5cb8df70.js"><link rel="prefetch" href="/flybird/assets/js/8.b9965601.js"><link rel="prefetch" href="/flybird/assets/js/9.63568abf.js">
+    <link rel="stylesheet" href="/flybird/assets/css/0.styles.c373855a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/flybird/" class="home-link router-link-active"><!----> <span class="site-name">云边的鸟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link router-link-active">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link router-link-active">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>R语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flybird/study/R/R-01.html" class="sidebar-link">R语言学习</a></li><li><a href="/flybird/study/R/R-02.html" aria-current="page" class="active sidebar-link">R语言</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第七节课" class="sidebar-link">第七节课</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#创建新变量" class="sidebar-link">创建新变量</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第八节课" class="sidebar-link">第八节课</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#数据重复" class="sidebar-link">数据重复</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#处理原则" class="sidebar-link">处理原则</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#填补-指示变量" class="sidebar-link">填补+指示变量</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#缺失值填补" class="sidebar-link">缺失值填补</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第九节课" class="sidebar-link">第九节课</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#删除存在缺失值的行" class="sidebar-link">删除存在缺失值的行</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#日期变量函数" class="sidebar-link">日期变量函数</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第十次课" class="sidebar-link">第十次课</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#合并数据集" class="sidebar-link">合并数据集</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#选取变量" class="sidebar-link">选取变量</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#使用subset函数选取数据" class="sidebar-link">使用subset函数选取数据</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第十一节课" class="sidebar-link">第十一节课</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#整合数据" class="sidebar-link">整合数据</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#" class="sidebar-link"></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#内连接" class="sidebar-link">内连接</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#外连接" class="sidebar-link">外连接</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#分析数据间的关系的关系-散点图" class="sidebar-link">分析数据间的关系的关系--散点图</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#修改颜色" class="sidebar-link">修改颜色</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#查看colors自带的函数" class="sidebar-link">查看colors自带的函数</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#绘制cars数据集speed与dist的散点图-散点为红色" class="sidebar-link">绘制cars数据集speed与dist的散点图,散点为红色</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#绘制cars数据集speed与dist的折线图-线条为虚线-线条粗细为2-线条为蓝色" class="sidebar-link">绘制cars数据集speed与dist的折线图,线条为虚线,线条粗细为2,线条为蓝色</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#修改文本属性" class="sidebar-link">修改文本属性</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#散点为倒三角-大小为0-5-点边框为蓝色-点内部填充红色" class="sidebar-link">散点为倒三角,大小为0.5,点边框为蓝色,点内部填充红色</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#添加图例" class="sidebar-link">添加图例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#实例-绘制vadeaths数据集的条形图-并添加图例" class="sidebar-link">实例,绘制VADeaths数据集的条形图,并添加图例</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#legend函数" class="sidebar-link">legend函数</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#par函数" class="sidebar-link">par函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#将图形按照2行3列摆放" class="sidebar-link">将图形按照2行3列摆放</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#第十四节课" class="sidebar-link">第十四节课</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#保存图形" class="sidebar-link">保存图形</a></li></ul></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#利用鸢尾花" class="sidebar-link">利用鸢尾花</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#利用facets参数绘制分面板散点图-并增加光滑曲线" class="sidebar-link">利用facets参数绘制分面板散点图,并增加光滑曲线</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#ggplot2包的语言逻辑" class="sidebar-link">ggplot2包的语言逻辑</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#ggplot绘图" class="sidebar-link">ggplot绘图</a></li><li class="sidebar-sub-header"><a href="/flybird/study/R/R-02.html#使用ggplot2包绘图" class="sidebar-link">使用ggplot2包绘图</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C语言</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="r语言"><a href="#r语言" class="header-anchor">#</a> R语言</h1> <h2 id="第七节课"><a href="#第七节课" class="header-anchor">#</a> 第七节课</h2> <h3 id="创建新变量"><a href="#创建新变量" class="header-anchor">#</a> 创建新变量</h3> <div class="language- extra-class"><pre class="language-text"><code>创建数据框
+ mydata &lt;- data.frame(x1 = c(2,2,6,4),x2 =c(3,4,2,8))
+&gt; #创建新边框
+&gt; mydata$sumx &lt;- mydata$x1+mydata$x2
+&gt; mydata
+  x1 x2 sumx
+1  2  3    5
+2  2  4    6
+3  6  2    8
+4  4  8   12
+&gt; mydata$meanx &lt;- (mydata$x1 + mydata$x2)/2
+&gt; 
+&gt; #创建新变量方法二
+&gt; mydata &lt;- transform(mydata,sumx =x1+x2,meanx=(x1+x2)/2)
+&gt; mydata &lt;- data.frame(x1 = c(2,2,6,4),x2 =c(3,4,2,8))
+&gt; mydata &lt;- transform(mydata,x3=100,x4=&quot;会计&quot;)
+&gt; mydata
+  x1 x2  x3   x4
+1  2  3 100 会计
+2  2  4 100 会计
+3  6  2 100 会计
+4  4  8 100 会计
+&gt; 
+</code></pre></div><h2 id="第八节课"><a href="#第八节课" class="header-anchor">#</a> 第八节课</h2> <h2 id="数据重复"><a href="#数据重复" class="header-anchor">#</a> 数据重复</h2> <p>可以说那个unique函数去除数据中完全重复发行,也可以利用sql语句中的distinct</p> <div class="language- extra-class"><pre class="language-text"><code>accept_nodup1 &lt;- unique(accepts)
+
+accept_nodup1 &lt;- unique(accepts)
+accept_nodup1
+
+accept_nodup2 &lt;- sqldf(&quot;select distinct* from accepts &quot;)
+accept_nodup2
+</code></pre></div><h2 id="处理原则"><a href="#处理原则" class="header-anchor">#</a> 处理原则</h2> <p>首选基于业务的填补方法,其次根据单变量分析进行填补</p> <p>缺失值少于20%
+连续变量使用均值或中位数
+分类变量不需要填补,单算一类即可,或者用众数填补\或直接删除存在缺失值的行,缺失值在20%-80%
+填补方法同上
+另外每个有缺失值的变量生成一个指示哑变量.</p> <h3 id="填补-指示变量"><a href="#填补-指示变量" class="header-anchor">#</a> 填补+指示变量</h3> <p>不完整数据</p> <div class="language- extra-class"><pre class="language-text"><code>Median=30  取中位数
+</code></pre></div><h3 id="缺失值填补"><a href="#缺失值填补" class="header-anchor">#</a> 缺失值填补</h3> <p>实例 汽车贷款违约数据集accepts,五年内信用不良事件数量,(tot_derog) 中的缺失值用用均值填补</p> <p>首先生成tot_derog的均值,再使用is.na表示变量中的缺失值,最后使用均值替代缺失值</p> <div class="language- extra-class"><pre class="language-text"><code>vmean &lt;- mean(accepts$tot_derog,na.rm=TRUE)
+accepts $tot_derog_empflag &lt;- is.na(accepts$tot_derog)
+</code></pre></div><h2 id="第九节课"><a href="#第九节课" class="header-anchor">#</a> 第九节课</h2> <h3 id="删除存在缺失值的行"><a href="#删除存在缺失值的行" class="header-anchor">#</a> 删除存在缺失值的行</h3> <div class="language- extra-class"><pre class="language-text"><code> 删除存在缺失值的行
+汽车存贷款违约数据集,删除存在缺失值得行
+
+accepts1 &lt;- read.csv(&quot;local/accepts.csv&quot; ,header=T)
+nrow(accepts1)
+accepts1 &lt;- na.omit(accepts1)
+nrow(accepts1)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#噪声值
+#数据中有一个或几个数值与其他数值相比差异较大,又称为异常值,离群值
+#单变量噪声值得处理---盖帽法
+
+#对汽车贷款违约数据集accepts,五年内信用不良事件数量(to_derog)进行盖帽法处理
+accepts1 &lt;- read.csv(&quot;local/accepts.csv&quot; ,header=T)
+tot_mean &lt;- mean(accepts$tot_derog)
+tot_sd &lt;- sd(accepts$tot_derog)
+a1 &lt;- tot_mean-3*tot_sd
+a2 &lt;- tot_mean+3*tot_sd
+accepts[accepts$tot_derog &lt;= a1,]$tot_derog &lt;-a1
+accepts[accepts$tot_derog &gt; a2,]$tot_derog &lt;- a2
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#首先对age_oldest_tr 变量进行缺失值均值填补
+
+vmean &lt;- mean(accepts$age_oldest_tr,na.rm = T)
+accepts[is.na(accepts$age_oldest_tr),]$age_oldest_tr &lt;- vmean
+
+ewtd &lt;- cut(accepts$age_oldest_tr,4)#这里以age_oldest_tr字段等宽分为4段
+table(ewtd)
+
+levels(ewtd) &lt;- paste(&quot;L&quot;,0:3,sep=&quot;&quot;) #将连续变量转化成定序列
+accepts$age_oldest_tr_1 &lt;-ewtd
+table(accepts$age_oldest_tr_1)
+</code></pre></div><h3 id="日期变量函数"><a href="#日期变量函数" class="header-anchor">#</a> 日期变量函数</h3> <h2 id="第十次课"><a href="#第十次课" class="header-anchor">#</a> 第十次课</h2> <p>数据排序</p> <div class="language- extra-class"><pre class="language-text"><code>score &lt;- data.frame(student = c (&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,'D'),gender=c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;,&quot;F&quot;),
+                    math=c(90,70,80,60),Eng=c(88,78,69,98),Chinese = c (66,59,NA,88)
+                    )
+score
+
+ student gender math Eng Chinese
+1       A      M   90  88      66
+2       B      M   70  78      59
+3       C      F   80  69      NA
+4       D      F   60  98      88
+</code></pre></div><p>默认升序</p> <div class="language- extra-class"><pre class="language-text"><code> score &lt;- data.frame(student = c (&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,'D'),gender=c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;,&quot;F&quot;),
++                     math=c(90,70,80,60),Eng=c(88,78,69,98),Chinese = c (66,59,NA,88)
++                     )
+&gt; score[order(score$math),]
+  student gender math Eng Chinese
+4       D      F   60  98      88
+2       B      M   70  78      59
+3       C      F   80  69      NA
+1       A      M   90  88      66
+</code></pre></div><p>降序:在前面加&quot;-&quot;,或者在添加 decreasing =T</p> <div class="language- extra-class"><pre class="language-text"><code>假如出现成绩相同的时候按照英语成绩进行排列
+ score &lt;- data.frame(student = c (&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,'D'),gender=c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;,&quot;F&quot;),
++                     math=c(90,80,80,60),Eng=c(88,78,69,98),Chinese = c (66,59,NA,88)
++                     )
+&gt; score[order(score$math,score$Eng),]
+  student gender math Eng Chinese
+4       D      F   60  98      88
+3       C      F   80  69      NA
+2       B      M   80  78      59
+1       A      M   90  88      66
+</code></pre></div><h3 id="合并数据集"><a href="#合并数据集" class="header-anchor">#</a> 合并数据集</h3> <p>函数 rbind 和cbind
+对于数据框而言,分别为增加新的样本数据和增加新属性变量.
+[注意]
+rbind的自变量的宽度(列数)应与原数据框的宽度相等.
+cbind的自变量的高度(行数)应与原数据框的高度相等</p> <h3 id="选取变量"><a href="#选取变量" class="header-anchor">#</a> 选取变量</h3> <p>书本P69</p> <p>删除变量</p> <div class="language- extra-class"><pre class="language-text"><code>向量[1]1234,删除第一个元素
+ a &lt;- c(1,2,3,4)
+ a[-1]
+</code></pre></div><h3 id="使用subset函数选取数据"><a href="#使用subset函数选取数据" class="header-anchor">#</a> 使用subset函数选取数据</h3> <div class="language- extra-class"><pre class="language-text"><code> subset(x,subset,select)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> # 使用subset函数选取数据
+ 
+ df1 &lt;- data.frame(name = c(&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;),
+                   age = c(20,29,30),
+                   sex = c(&quot;f&quot;,&quot;m&quot;,&quot;f&quot;))
+ df1
+ selectresult1 &lt;- subset(df1, name == &quot;aa&quot;,select = c(age,sex))
+ selectresult2 &lt;- subset(df1, name == &quot;aa&quot;&amp;sex ==&quot;f&quot;,select = c(age,sex))
+ selectresult1 
+ selectresult2
+ 
+</code></pre></div><h2 id="第十一节课"><a href="#第十一节课" class="header-anchor">#</a> 第十一节课</h2> <h3 id="整合数据"><a href="#整合数据" class="header-anchor">#</a> 整合数据</h3> <div class="language- extra-class"><pre class="language-text"><code>#整合数据
+name&lt;-c(rep(&quot;张三&quot;,1,3),rep(&quot;李四&quot;,3))
+name
+subject&lt;-c(&quot;数学&quot;,&quot;语文&quot;,&quot;英语&quot;,&quot;数学&quot;,&quot;语文&quot;,&quot;英语&quot;)
+score&lt;-c(89,80,70,90,70,80)
+stuid&lt;-c(1,1,1,2,2,2)
+stuscore&lt;-data.frame(name,subject,score,stuid)
+stuscore
+
+name subject score stuid
+1 张三    数学    89     1
+2 张三    语文    80     1
+3 张三    英语    70     1
+4 李四    数学    90     2
+5 李四    语文    70     2
+6 李四    英语    80     2
+
+sqldf(&quot;select name ,sum(score) as allscore from stuscore group by name order by allscore&quot;)
+
+
+ name allscore
+1 张三      239
+2 李四      240
+
+
+sqldf(&quot;select name ,stuid,sum(score) as allscore from stuscore group by name order by allscore&quot;)
+
+name stuid allscore
+1 张三     1      239
+2 李四     2      240
+
+#计算每个人单科的最高成绩
+sqldf(&quot;select stuid ,name,subject,max(score) as maxscore from stuscore 
+      group by stuid&quot;)
+
+      stuid name subject maxscore
+1     1 张三    数学       89
+2     2 李四    数学       90
+
+#计算每个人的平均成绩
+sqldf(&quot;select stuid ,name ,avg(score) as avgscore from stuscore group
+      by stuid&quot;)
+
+       stuid name avgscore
+1     1 张三 79.66667
+2     2 李四 80.00000
+</code></pre></div><h2 id=""><a href="#" class="header-anchor">#</a></h2> <h3 id="内连接"><a href="#内连接" class="header-anchor">#</a> 内连接</h3> <p>使用merge函数进行连接
+在by后连接的公共字段&quot;id&quot;,</p> <div class="language- extra-class"><pre class="language-text"><code>table1 &lt;- read.csv(&quot;local/Table1.csv&quot;)
+table1
+table2 &lt;- read.csv(&quot;local/Table2.csv&quot;)
+table2
+
+inner1 &lt;- merge(table1,table2,by = &quot;id&quot;,all = FALSE)
+inner1
+
+id a b
+1  3 c e
+inner3 &lt;- sqldf(&quot;select * from table1 as a inner join table2 as b on a.id
+                = b.id&quot;)
+inner3
+</code></pre></div><h3 id="外连接"><a href="#外连接" class="header-anchor">#</a> 外连接</h3> <div class="language- extra-class"><pre class="language-text"><code> merge函数进行连接,多了参数all.x =TRUE
+
+left1 &lt;- merge(table1,table2,by = &quot;id&quot;,all.x = TRUE)
+left1
+
+id a    b
+1  1 a &lt;NA&gt;
+2  2 b &lt;NA&gt;
+3  3 c    e
+left2 &lt;- sqldf(&quot;select t1.id ,t1.a , t2.b from table1 as t1 left join table2 as t2 on t1.id=t2.id&quot;)
+left2
+
+id a    b
+1  1 a &lt;NA&gt;
+2  2 b &lt;NA&gt;
+3  3 c    e
+</code></pre></div><h2 id="分析数据间的关系的关系-散点图"><a href="#分析数据间的关系的关系-散点图" class="header-anchor">#</a> 分析数据间的关系的关系--散点图</h2> <div class="language- extra-class"><pre class="language-text"><code>### 绘制cars数据集的速度与刹车距离的散点图
+plot(cars[,1],cars[,2])
+plot(cars$speed,cars$dist)
+plot(cars)
+</code></pre></div><h3 id="修改颜色"><a href="#修改颜色" class="header-anchor">#</a> 修改颜色</h3> <h3 id="查看colors自带的函数"><a href="#查看colors自带的函数" class="header-anchor">#</a> 查看colors自带的函数</h3> <p>colors()[20:34]</p> <h3 id="绘制cars数据集speed与dist的散点图-散点为红色"><a href="#绘制cars数据集speed与dist的散点图-散点为红色" class="header-anchor">#</a> 绘制cars数据集speed与dist的散点图,散点为红色</h3> <div class="language- extra-class"><pre class="language-text"><code>plot(cars,col=&quot;red&quot;)
+
+
+plot(cars,pch=18,cex=0.5,col=&quot;blue&quot;,bg=&quot;green&quot;)
+</code></pre></div><h2 id="绘制cars数据集speed与dist的折线图-线条为虚线-线条粗细为2-线条为蓝色"><a href="#绘制cars数据集speed与dist的折线图-线条为虚线-线条粗细为2-线条为蓝色" class="header-anchor">#</a> 绘制cars数据集speed与dist的折线图,线条为虚线,线条粗细为2,线条为蓝色</h2> <p>plot(cars,type=&quot;l&quot;,lty=2,lwd=2,col=&quot;blue&quot;)</p> <h2 id="修改文本属性"><a href="#修改文本属性" class="header-anchor">#</a> 修改文本属性</h2> <h2 id="散点为倒三角-大小为0-5-点边框为蓝色-点内部填充红色"><a href="#散点为倒三角-大小为0-5-点边框为蓝色-点内部填充红色" class="header-anchor">#</a> 散点为倒三角,大小为0.5,点边框为蓝色,点内部填充红色</h2> <div class="language- extra-class"><pre class="language-text"><code>plot(cars,xlab=&quot;汽车速度&quot;,ylab=&quot;刹车距离&quot;,pch=25,cex=0.5,col=&quot;blue&quot;,bg=&quot;red&quot;)
+title(main = list(&quot;汽车速度与刹车距离散点图&quot;,cex=1.1,font=2))
+text(8,100,labels = '20世纪20年代' ,cex=0.8,)#说明数据来源
+text(8.5,80,labels='Methods of Correlation Analysis',cex=0.6,font=3)#杂志名称
+plot(cars,xlab=list(&quot;汽车速度&quot;,col='red',font=3,cex=0.5),
+     ylab='刹车距离',pch=25,cex=0.5,col=&quot;blue&quot;,bg=&quot;red&quot;)
+</code></pre></div><h2 id="添加图例"><a href="#添加图例" class="header-anchor">#</a> 添加图例</h2> <h3 id="实例-绘制vadeaths数据集的条形图-并添加图例"><a href="#实例-绘制vadeaths数据集的条形图-并添加图例" class="header-anchor">#</a> 实例,绘制VADeaths数据集的条形图,并添加图例</h3> <h2 id="legend函数"><a href="#legend函数" class="header-anchor">#</a> legend函数</h2> <div class="language- extra-class"><pre class="language-text"><code>barplot(VADeaths,beside=TRUE,col = c(&quot;red&quot;,&quot;yellow&quot;,&quot;green&quot;,&quot;blue&quot;,&quot;gray&quot;),
+        title=&quot;城市&quot;)
+
+legend(0.1,75,legend=rownames(VADeaths),cex=0.45,
+       pch=c(15,15,15,15,15),horiz = T,bty=&quot;n&quot;,
+       col = c(&quot;red&quot;,&quot;yellow&quot;,&quot;green&quot;,&quot;blue&quot;,&quot;gray&quot;))
+</code></pre></div><h2 id="par函数"><a href="#par函数" class="header-anchor">#</a> par函数</h2> <h3 id="将图形按照2行3列摆放"><a href="#将图形按照2行3列摆放" class="header-anchor">#</a> 将图形按照2行3列摆放</h3> <div class="language- extra-class"><pre class="language-text"><code>mfrow1 &lt;- par(mfrow=c(2,3))
+for (i in 1:6) {
+  plot(c(1:i),main=paste(&quot;I'am image:&quot;,i))
+}
+par(mfrow=c(1,1))
+</code></pre></div><h2 id="第十四节课"><a href="#第十四节课" class="header-anchor">#</a> 第十四节课</h2> <h3 id="保存图形"><a href="#保存图形" class="header-anchor">#</a> 保存图形</h3> <div class="language- extra-class"><pre class="language-text"><code>jpeg(filename = 'D:/R_edu/local/散点图练习.jpg')
+mfrow1 &lt;- par(mfrow=c(2,3))
+for (i in 1:6) {
+  plot(c(1:i),main=paste(&quot;I'am image:&quot;,i))
+}
+dev.off()
+</code></pre></div><h2 id="利用鸢尾花"><a href="#利用鸢尾花" class="header-anchor">#</a> 利用鸢尾花</h2> <div class="language- extra-class"><pre class="language-text"><code>qplot(Species ,Sepal.Length,data =iris,
+      geom =&quot;boxplot&quot;,fill =Species,
+      main = &quot;依据种类分组的花萼长度箱线图&quot;)
+
+
+qplot(Sepal.Length,Sepal.Width,data=iris,
+      colour = Species,shape =Species,
+      main = &quot;绘制花萼长度和花萼宽度的散点图&quot;)
+</code></pre></div><h3 id="利用facets参数绘制分面板散点图-并增加光滑曲线"><a href="#利用facets参数绘制分面板散点图-并增加光滑曲线" class="header-anchor">#</a> 利用facets参数绘制分面板散点图,并增加光滑曲线</h3> <div class="language- extra-class"><pre class="language-text"><code>qplot(Sepal.Length,Sepal.Width,data =iris,
+      geom = c(&quot;point&quot;,&quot;smooth&quot;),
+      facets = ~Species,colour = Species,
+      main =&quot;绘制分面板的散点图&quot;)
+</code></pre></div><h3 id="ggplot2包的语言逻辑"><a href="#ggplot2包的语言逻辑" class="header-anchor">#</a> ggplot2包的语言逻辑</h3> <div class="language- extra-class"><pre class="language-text"><code>plot(iris$Sepal.Length,iris$Sepal.Width)
+ggplot(data = iris ,
+       aes(x = Sepal.Length,y = Sepal.Width))+
+      geom_point(color = &quot;darkred&quot;)
+</code></pre></div><h3 id="ggplot绘图"><a href="#ggplot绘图" class="header-anchor">#</a> ggplot绘图</h3> <div class="language- extra-class"><pre class="language-text"><code>ggplot(data = iris ,
+       aes(x = Sepal.Length,y = Sepal.Width,colour = Species))
+
+</code></pre></div><h3 id="使用ggplot2包绘图"><a href="#使用ggplot2包绘图" class="header-anchor">#</a> 使用ggplot2包绘图</h3> <div class="language- extra-class"><pre class="language-text"><code>ggplot(data=iris,aes(x=Sepal.Length,y=Sepal.Width,
+                     shape))
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/flybird/study/R/R-01.html" class="prev">
+        R语言学习
+      </a></span> <span class="next"><a href="/flybird/study/C/C-01.html">
+        第一章程序设计和C语言
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/flybird/assets/js/app.cce8d3ec.js" defer></script><script src="/flybird/assets/js/2.e60e2e84.js" defer></script><script src="/flybird/assets/js/22.3002f630.js" defer></script>
+  </body>
+</html>

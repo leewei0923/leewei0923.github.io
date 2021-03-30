@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第一章程序设计和C语言 | 云边的鸟</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录学习新技术的博客笔记">
+    
+    <link rel="preload" href="/flybird/assets/css/0.styles.c373855a.css" as="style"><link rel="preload" href="/flybird/assets/js/app.cce8d3ec.js" as="script"><link rel="preload" href="/flybird/assets/js/2.e60e2e84.js" as="script"><link rel="preload" href="/flybird/assets/js/19.6ecb346e.js" as="script"><link rel="prefetch" href="/flybird/assets/js/10.ecf47c4e.js"><link rel="prefetch" href="/flybird/assets/js/11.64c4b41d.js"><link rel="prefetch" href="/flybird/assets/js/12.d32978c7.js"><link rel="prefetch" href="/flybird/assets/js/13.9400a2f2.js"><link rel="prefetch" href="/flybird/assets/js/14.078b54f6.js"><link rel="prefetch" href="/flybird/assets/js/15.19dbba4a.js"><link rel="prefetch" href="/flybird/assets/js/16.4930a008.js"><link rel="prefetch" href="/flybird/assets/js/17.c70f1bc7.js"><link rel="prefetch" href="/flybird/assets/js/18.6e8a6dfa.js"><link rel="prefetch" href="/flybird/assets/js/20.cd823d1e.js"><link rel="prefetch" href="/flybird/assets/js/21.851c0b41.js"><link rel="prefetch" href="/flybird/assets/js/22.3002f630.js"><link rel="prefetch" href="/flybird/assets/js/3.d3e1f837.js"><link rel="prefetch" href="/flybird/assets/js/4.8c4a9ffe.js"><link rel="prefetch" href="/flybird/assets/js/5.df2d1880.js"><link rel="prefetch" href="/flybird/assets/js/6.c8b7a84a.js"><link rel="prefetch" href="/flybird/assets/js/7.5cb8df70.js"><link rel="prefetch" href="/flybird/assets/js/8.b9965601.js"><link rel="prefetch" href="/flybird/assets/js/9.63568abf.js">
+    <link rel="stylesheet" href="/flybird/assets/css/0.styles.c373855a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/flybird/" class="home-link router-link-active"><!----> <span class="site-name">云边的鸟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link router-link-active">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link router-link-active">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>R语言</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>C语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flybird/study/C/C-01.html" aria-current="page" class="active sidebar-link">第一章程序设计和C语言</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/study/C/C-01.html#简单的c语言设计" class="sidebar-link">简单的C语言设计</a></li><li class="sidebar-sub-header"><a href="/flybird/study/C/C-01.html#c语言程序的结构" class="sidebar-link">C语言程序的结构</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="第一章程序设计和c语言"><a href="#第一章程序设计和c语言" class="header-anchor">#</a> 第一章程序设计和C语言</h1> <h2 id="简单的c语言设计"><a href="#简单的c语言设计" class="header-anchor">#</a> 简单的C语言设计</h2> <div class="language-C extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;studio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;Hello World\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span>
+Hello World
+</code></pre></div><p>程序分析:</p> <p>看程序的第2行,其中mian是C语言中&quot;主函数&quot;的名字。main前面的“int”
+是整数（integer）的缩写，他是一个类型符，“int main() ”表示main函数属于&quot;整数类型&quot;.在执行main函数后,会产生一个函数值,它是一个整数.第5行&quot;return 0;&quot; 的作用是:如果此程序正常运行,在结束前将整数0,作为main函数的值,如果main函数执行出现异常,程序就会中断,不执行&quot;return 0;&quot;,此时函数值是一个非零的整数.</p> <p><strong>例子</strong></p> <div class="language-C extra-class"><pre class="language-c"><code><span class="token comment">//求3个整数之和</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;studio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token comment">//求3个整数之和</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>sum<span class="token punctuation">;</span> <span class="token comment">//定义变量a,b,c,sum</span>
+    a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>        <span class="token comment">//以下三行是对3个变量赋值</span>
+    b <span class="token operator">=</span> <span class="token number">456</span><span class="token punctuation">;</span>        
+    c <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">43</span><span class="token punctuation">;</span>
+    sum <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token operator">+</span>c<span class="token punctuation">;</span>    <span class="token comment">//求3个变量的值之和,放在变量sum中</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;sum is %d\n&quot;</span><span class="token punctuation">,</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//输出sum的值</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">//使main函数值为0</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//以下,为输出结果</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span>
+sum is <span class="token number">536</span>
+</code></pre></div><p><strong>例子2</strong></p> <div class="language-C extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;studio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>                       <span class="token comment">//主函数</span>
+<span class="token punctuation">{</span>                                
+    <span class="token keyword">int</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> age_1<span class="token punctuation">,</span><span class="token keyword">int</span> age_2<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//对被调用函数max的声明</span>
+    <span class="token keyword">int</span> age_1<span class="token punctuation">,</span>age_2<span class="token punctuation">,</span>age_max<span class="token punctuation">;</span>      <span class="token comment">//定义整数变量age_1,age_2,age_max</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d,%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>age_1<span class="token punctuation">,</span><span class="token operator">&amp;</span>age_2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//从键盘输入变量age_1和age_2的值</span>
+    age_max <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>age_1<span class="token punctuation">,</span>age_2<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//调用max函数,将得到的值赋给age_max</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;Max is %d\n&quot;</span><span class="token punctuation">,</span>age_max<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出age_max的值</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//下面是求两个整数中的大者的函数</span>
+<span class="token keyword">int</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> x <span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span>              <span class="token comment">//定义max函数,函数值为整数型,形式参数x,y为整数</span>
+<span class="token punctuation">{</span>                         
+    <span class="token keyword">int</span> z<span class="token punctuation">;</span>                <span class="token comment">//定义本函数中用到的变量z为整形</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> x <span class="token operator">&gt;</span> y<span class="token punctuation">)</span> z<span class="token operator">=</span>x<span class="token punctuation">;</span>       <span class="token comment">//如果x&gt;y,则将x的值赋给变量z</span>
+    <span class="token keyword">else</span> z<span class="token operator">=</span>y<span class="token punctuation">;</span>             <span class="token comment">//否则,将y的值赋给变量z</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">//将z的值返回到主函数中调用函数的位置</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="c语言程序的结构"><a href="#c语言程序的结构" class="header-anchor">#</a> C语言程序的结构</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/flybird/study/R/R-02.html" class="prev">
+        R语言
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/flybird/assets/js/app.cce8d3ec.js" defer></script><script src="/flybird/assets/js/2.e60e2e84.js" defer></script><script src="/flybird/assets/js/19.6ecb346e.js" defer></script>
+  </body>
+</html>

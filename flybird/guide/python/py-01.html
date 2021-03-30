@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>python初体验 | 云边的鸟</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录学习新技术的博客笔记">
+    
+    <link rel="preload" href="/flybird/assets/css/0.styles.c373855a.css" as="style"><link rel="preload" href="/flybird/assets/js/app.cce8d3ec.js" as="script"><link rel="preload" href="/flybird/assets/js/2.e60e2e84.js" as="script"><link rel="preload" href="/flybird/assets/js/14.078b54f6.js" as="script"><link rel="prefetch" href="/flybird/assets/js/10.ecf47c4e.js"><link rel="prefetch" href="/flybird/assets/js/11.64c4b41d.js"><link rel="prefetch" href="/flybird/assets/js/12.d32978c7.js"><link rel="prefetch" href="/flybird/assets/js/13.9400a2f2.js"><link rel="prefetch" href="/flybird/assets/js/15.19dbba4a.js"><link rel="prefetch" href="/flybird/assets/js/16.4930a008.js"><link rel="prefetch" href="/flybird/assets/js/17.c70f1bc7.js"><link rel="prefetch" href="/flybird/assets/js/18.6e8a6dfa.js"><link rel="prefetch" href="/flybird/assets/js/19.6ecb346e.js"><link rel="prefetch" href="/flybird/assets/js/20.cd823d1e.js"><link rel="prefetch" href="/flybird/assets/js/21.851c0b41.js"><link rel="prefetch" href="/flybird/assets/js/22.3002f630.js"><link rel="prefetch" href="/flybird/assets/js/3.d3e1f837.js"><link rel="prefetch" href="/flybird/assets/js/4.8c4a9ffe.js"><link rel="prefetch" href="/flybird/assets/js/5.df2d1880.js"><link rel="prefetch" href="/flybird/assets/js/6.c8b7a84a.js"><link rel="prefetch" href="/flybird/assets/js/7.5cb8df70.js"><link rel="prefetch" href="/flybird/assets/js/8.b9965601.js"><link rel="prefetch" href="/flybird/assets/js/9.63568abf.js">
+    <link rel="stylesheet" href="/flybird/assets/css/0.styles.c373855a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/flybird/" class="home-link router-link-active"><!----> <span class="site-name">云边的鸟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link router-link-active">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/flybird/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/flybird/guide/" class="nav-link router-link-active">
+  码书
+</a></div><div class="nav-item"><a href="/flybird/study/" class="nav-link">
+  现实艺术
+</a></div><div class="nav-item"><a href="/flybird/poetry/" class="nav-link">
+  诗雅颂
+</a></div><div class="nav-item"><a href="https://www.7miaoyu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  七秒鱼
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>html/css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flybird/guide/python/py-01.html" aria-current="page" class="active sidebar-link">python初体验</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flybird/guide/python/py-01.html#常见的dos指令" class="sidebar-link">常见的dos指令</a></li><li class="sidebar-sub-header"><a href="/flybird/guide/python/py-01.html#环境变量" class="sidebar-link">环境变量</a></li><li class="sidebar-sub-header"><a href="/flybird/guide/python/py-01.html#进制介绍" class="sidebar-link">进制介绍</a></li><li class="sidebar-sub-header"><a href="/flybird/guide/python/py-01.html#python开发环境搭建" class="sidebar-link">python开发环境搭建</a></li></ul></li><li><a href="/flybird/guide/python/py-02.html" class="sidebar-link">python初步学习</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>jQuery</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flybird/guide/jquery/jq-01.html" class="sidebar-link">jQuery初体验</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="python初体验"><a href="#python初体验" class="header-anchor">#</a> python初体验</h1> <h2 id="常见的dos指令"><a href="#常见的dos指令" class="header-anchor">#</a> 常见的dos指令</h2> <div class="language- extra-class"><pre><code># dir
+ - 查看当前目录下的所有的文件(夹)
+# cd
+ - 进入指定的目录
+# .
+ - 当前目录
+# ..
+ - 上一个目录
+# md 
+ - 创建一个目录
+# rd
+ - 删除一个目录
+# del
+ - 删除一个文件
+# cls
+ - 清除屏幕
+</code></pre></div><p><strong>小技巧</strong></p> <div class="language- extra-class"><pre><code># 方向键
+ - 方向键上下,查看命令的历史记录
+ - tab键自动补全命令
+</code></pre></div><h2 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h2> <p>环境变量值得就是操作系统中的一些变量,可以通过修改环境变量,来对计算机进行配置.</p> <div class="language- extra-class"><pre><code>1. 查看环境变量
+  &gt; 右键计算机(此电脑),选择属性
+  &gt; 系统界面左侧选择,高级系统设置
+  &gt; 选择环境变量
+   环境变量界面分成了两个部分,上边是用户环境变量,下边是系统变量
+2.添加环境变量
+  &gt; 通过新建按钮添加变量
+  &gt; 一个环境变量可以有多个值,值与值之间使用英文;隔开
+3.修改环境变量
+  &gt; 通过编辑按钮啦修改环境变量
+4.删除环境变量 
+</code></pre></div><h2 id="进制介绍"><a href="#进制介绍" class="header-anchor">#</a> 进制介绍</h2> <div class="language- extra-class"><pre><code># 十进制
+ - 十进制就是满十进一的进制
+ - 十进制当中一共有10个数字
+# 二进制
+ - 满二进一
+ - 二进制一共有2个数字
+# 八进制
+ - 满八进一
+ - 八进制中有八个数字
+# 十六进制
+  - 满十六进一
+  - 十六进制有16个数字
+  - 0 1 2 3 4 5 6 7 8 9 a b c d e f
+</code></pre></div><h2 id="python开发环境搭建"><a href="#python开发环境搭建" class="header-anchor">#</a> python开发环境搭建</h2> <blockquote><p>安装Python解释器</p></blockquote> <div class="language- extra-class"><pre><code># python解释器分类
+  1.CPython 
+   - 用c语言编写的解释器
+  2.pypy
+   - 用python编写的解释器
+  3.IronPython
+   - 用.net编写的python解释器
+  4.jython
+   - 用java编写的解释器
+</code></pre></div><blockquote><p>步骤</p></blockquote> <div class="language- extra-class"><pre><code># 1.下载安装包(两个版本不兼容)
+   - 3.x
+   - 2.x
+  2.安装(傻瓜式安装)
+</code></pre></div><p><strong>第一步</strong></p> <p>双击打开后是这样
+<img src="https://baklibcdn.dagle.cn/t/06b9c559-2509-4f48-9f3b-2d724f9c2892/u/555fb5d3-45cb-47ed-8499-324dfd968b7d/Screenshot_2021-02-25-21-54-18-16_149003a2d400f6a1614261504034.jpg" alt="开始"></p> <p><strong>第二步</strong></p> <p>点击第二个自定义安装</p> <p><img src="https://baklibcdn.dagle.cn/t/06b9c559-2509-4f48-9f3b-2d724f9c2892/u/555fb5d3-45cb-47ed-8499-324dfd968b7d/Screenshot_2021-02-25-21-55-20-11_149003a2d400f6a1614261519982.jpg" alt="第二"></p> <p><strong>第三步</strong></p> <p>自定义以后,然后点击安装install
+<img src="https://baklibcdn.dagle.cn/t/06b9c559-2509-4f48-9f3b-2d724f9c2892/u/555fb5d3-45cb-47ed-8499-324dfd968b7d/Screenshot_2021-02-25-21-55-46-33_149003a2d400f6a1614261528952.jpg" alt="d"></p> <p><strong>第四步</strong></p> <p>成功以后win+r,然后搜索cmd输入python出来这样的表示成功安装了</p> <p><img src="https://baklibcdn.dagle.cn/t/06b9c559-2509-4f48-9f3b-2d724f9c2892/u/555fb5d3-45cb-47ed-8499-324dfd968b7d/Screenshot_2021-02-25-21-56-19-25_149003a2d400f6a1614261536862.jpg" alt="f"></p> <p>放大后
+<img src="https://baklibcdn.dagle.cn/t/06b9c559-2509-4f48-9f3b-2d724f9c2892/u/555fb5d3-45cb-47ed-8499-324dfd968b7d/Screenshot_2021-02-25-21-56-30-46_149003a2d400f6a1614261547831.jpg" alt="jdf"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/flybird/guide/javascript/js-04.html" class="prev">
+        javascript学习04
+      </a></span> <span class="next"><a href="/flybird/guide/python/py-02.html">
+        python初步学习
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/flybird/assets/js/app.cce8d3ec.js" defer></script><script src="/flybird/assets/js/2.e60e2e84.js" defer></script><script src="/flybird/assets/js/14.078b54f6.js" defer></script>
+  </body>
+</html>

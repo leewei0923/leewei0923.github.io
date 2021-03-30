@@ -11,7 +11,7 @@ var COMMENT_CACHE_KEY = "commentKey";
 var valine;
 
 // 管理员名称,评论时添加 [博主] 后缀
-var ADMIN_NAME = "removeif";
+var ADMIN_NAME = "leewei";
 
 function ajaxReqForGitHub(url, authorizationToken, call) {
     $.ajax({
@@ -335,7 +335,6 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
             }
         }
         // console.clear();
-        console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
     }
         ,
         500
