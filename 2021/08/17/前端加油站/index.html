@@ -18,9 +18,25 @@
   <meta name="author" content="云边的鸟">
   <meta name="keywords" content="">
   
-  <title>标签 - css|html - 云边的鸟</title>
+  <title>前端加油站(长期更新) - 云边的鸟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -135,17 +151,50 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签 - css|html">
+            <span class="h2" id="subtitle" title="前端加油站(长期更新)">
               
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-17 16:23" pubdate>
+        2021年8月17日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      442 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -154,40 +203,92 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/01/29/timeLine/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">时光轴</span>
-      <time style="float: right;">01-29</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">前端加油站(长期更新)</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前端加油站"><a href="#前端加油站" class="headerlink" title="前端加油站"></a>前端加油站</h1><h2 id="4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"><a href="#4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？" class="headerlink" title="4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"></a>4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？</h2><p><strong>同源策略?</strong></p>
+<p>同源策略是一种安全机制，限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互，这是一个用于隔离潜在恶意文件的重要机制。（可扩展到域、cookie、iframe、postmessage等细节） </p>
+<p>谁受约束? Cookie , Dom , 第三方插件以及 XMLHttpRequest 都受到同源策略的约束</p>
+<p>Cookie:</p>
+<p>只有同源的网页才能共享，但是若两个页面一级域名相同，只是二级域名不同，那么浏览器可以通过设置<code>document.domain</code>来共享 Cookie </p>
+<p>XMLHttpRequest</p>
+<p>它受到同源策略的约束，不能跨域访问资源，但是 W3C 委员会制定了 XMLHttpRequest 跨域访问标准。  通过目标返回的 HTTP 头来授权，是否允许跨域访问。实现这一点的安全基础是 JavaScript 无法控制 HTTP 头</p>
+<p><strong>为什么会有这样的策略(目的)</strong></p>
+<p>为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
+<p><strong>本地开发时如何独立解决接口跨域的问题(解决办法)</strong></p>
+<p>反向代理如 “配置nginx 与 host”、“webpack-dev-server proxy”，有理、可行即可<br>还可以延伸考察候选人对跨域请求和cookie配置等相关概念的掌握： 1、xhr.withCredentials = true; // 携带跨域cookie   fetch: credentials: “include”  2、服务器端使用CROS协议解决跨域访问数据问题时，需要设置响应消息头Access-Control-Allow-Credentials值为“true”。 同时，还需要设置响应消息头Access-Control-Allow-Origin值为域名或者通配符“*”</p>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/14/html-tupianfangda/">
+                        <span class="hidden-mobile">鼠标移上去图片放大</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -284,9 +385,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
