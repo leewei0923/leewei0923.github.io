@@ -18,7 +18,7 @@
   <meta name="author" content="云边的鸟">
   <meta name="keywords" content="">
   
-  <title>前端加油站(长期更新) - 云边的鸟</title>
+  <title>C++日记 - 云边的鸟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="前端加油站(长期更新)">
+            <span class="h2" id="subtitle" title="C++日记">
               
             </span>
 
@@ -161,8 +161,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-17 16:23" pubdate>
-        2021年8月17日 下午
+      <time datetime="2021-09-03 23:06" pubdate>
+        2021年9月3日 晚上
       </time>
     </span>
   
@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      442 字
+      379 字
     </span>
   
 
@@ -213,21 +213,81 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前端加油站(长期更新)</h1>
+            <h1 style="display: none">C++日记</h1>
             
             <div class="markdown-body">
-              <h1 id="前端加油站"><a href="#前端加油站" class="headerlink" title="前端加油站"></a>前端加油站</h1><h2 id="4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"><a href="#4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？" class="headerlink" title="4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"></a>4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？</h2><p><strong>同源策略?</strong></p>
-<p>同源策略是一种安全机制，限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互，这是一个用于隔离潜在恶意文件的重要机制。（可扩展到域、cookie、iframe、postmessage等细节） </p>
-<p>谁受约束? Cookie , Dom , 第三方插件以及 XMLHttpRequest 都受到同源策略的约束</p>
-<p>Cookie:</p>
-<p>只有同源的网页才能共享，但是若两个页面一级域名相同，只是二级域名不同，那么浏览器可以通过设置<code>document.domain</code>来共享 Cookie </p>
-<p>XMLHttpRequest</p>
-<p>它受到同源策略的约束，不能跨域访问资源，但是 W3C 委员会制定了 XMLHttpRequest 跨域访问标准。  通过目标返回的 HTTP 头来授权，是否允许跨域访问。实现这一点的安全基础是 JavaScript 无法控制 HTTP 头</p>
-<p><strong>为什么会有这样的策略(目的)</strong></p>
-<p>为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
-<p><strong>本地开发时如何独立解决接口跨域的问题(解决办法)</strong></p>
-<p>反向代理如 “配置nginx 与 host”、“webpack-dev-server proxy”，有理、可行即可<br>还可以延伸考察候选人对跨域请求和cookie配置等相关概念的掌握： 1、xhr.withCredentials = true; // 携带跨域cookie   fetch: credentials: “include”  2、服务器端使用CROS协议解决跨域访问数据问题时，需要设置响应消息头Access-Control-Allow-Credentials值为“true”。 同时，还需要设置响应消息头Access-Control-Allow-Origin值为域名或者通配符“*”</p>
+              <h1 id="第一阶段-C-基础语法入门"><a href="#第一阶段-C-基础语法入门" class="headerlink" title="第一阶段  - -  C++基础语法入门"></a>第一阶段  - -  C++基础语法入门</h1><h2 id="day-1"><a href="#day-1" class="headerlink" title="day 1"></a>day 1</h2><h3 id="输出Hello-World"><a href="#输出Hello-World" class="headerlink" title="输出Hello World"></a>输出Hello World</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt; </span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>; <span class="hljs-comment">//表示使用std的命名的空间 </span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;你好世界&quot;</span>;  <span class="hljs-comment">//会在屏幕上显示消息 &quot;Hello World&quot;。</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;  <span class="hljs-comment">//终止程序</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
+
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>C++ 定义常量两种方式</p>
+<ol>
+<li>#define 宏常量 <code>#define</code>  常量名 常量值</li>
+<li>const 修饰的变量 const 数据类型 常量名 常量值</li>
+</ol>
+<h3 id="sizeof关键字"><a href="#sizeof关键字" class="headerlink" title="sizeof关键字"></a>sizeof关键字</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">1.</span> 整型:<span class="hljs-keyword">short</span> ,<span class="hljs-keyword">int</span> ,<span class="hljs-keyword">long</span> ,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span><br><span class="hljs-number">2.</span> 可以利用<span class="hljs-keyword">sizeof</span>求出数据类型占用的内存<br><span class="hljs-number">3.</span> 语法: <span class="hljs-keyword">sizeof</span>(数据类型/ 变量)<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="实型"><a href="#实型" class="headerlink" title="实型"></a>实型</h3><ol>
+<li>单精度 float</li>
+<li>双精度 double</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>有效数字范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4字节</td>
+<td>7位有效数字</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节</td>
+<td>15-16位有效数字</td>
+</tr>
+</tbody></table>
+<h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><p>作用: 字符型变量用于显示单个字符</p>
+<p>语法: char ch = ‘a’;</p>
+<p><em>注意</em></p>
+<ol>
+<li>在显示字符型变量时, 用单引号符号括起来  , 不能用双引号</li>
+<li>单引号只能由一个字符 , 不可以是字符串</li>
+</ol>
+<p>C和C++ 中字符型变量只占用1个字符</p>
+<p>强制转换类型前面加(int) – 转为整数型</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+<th>ASCII码值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\a</td>
+<td>换行 , 将当前位置移到下一行头</td>
+<td>010</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>表示反斜杠</td>
+<td>092</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表符(跳到下一个TAB位置)</td>
+<td>009</td>
+</tr>
+</tbody></table>
+<h3 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h3><p>C语言:</p>
+<p><code>char 变量名[] = &quot;字符串值&quot;</code></p>
+<p>C++风格:</p>
+<p><code>string 变量名 = &quot;字符串值&quot;</code></p>
+<h1 id="第二阶段-核心编程"><a href="#第二阶段-核心编程" class="headerlink" title="第二阶段 - -  核心编程"></a>第二阶段 - -  核心编程</h1><h1 id="第三阶段-C-提高编程"><a href="#第三阶段-C-提高编程" class="headerlink" title="第三阶段 - - C++ 提高编程"></a>第三阶段 - - C++ 提高编程</h1>
             </div>
             <hr>
             <div>
@@ -237,7 +297,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+                      <a class="hover-with-bg" href="/tags/C/">C++</a>
                     
                   </div>
                 
@@ -254,9 +314,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/20/%E6%A0%A1%E6%8B%9B100%E9%A2%98/">
+                      <a href="/2021/09/04/javascript%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">js数据结构</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -264,8 +324,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/14/html-tupianfangda/">
-                        <span class="hidden-mobile">鼠标移上去图片放大</span>
+                      <a href="/2021/09/02/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                        <span class="hidden-mobile">React的生命周期</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

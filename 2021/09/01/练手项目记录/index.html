@@ -18,7 +18,7 @@
   <meta name="author" content="云边的鸟">
   <meta name="keywords" content="">
   
-  <title>前端加油站(长期更新) - 云边的鸟</title>
+  <title>云边的鸟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="前端加油站(长期更新)">
+            <span class="h2" id="subtitle" title="">
               
             </span>
 
@@ -161,8 +161,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-17 16:23" pubdate>
-        2021年8月17日 下午
+      <time datetime="2021-09-01 14:27" pubdate>
+        2021年9月1日 下午
       </time>
     </span>
   
@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      442 字
+      370 字
     </span>
   
 
@@ -183,7 +183,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      5
        分钟
     </span>
   
@@ -213,33 +213,76 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前端加油站(长期更新)</h1>
+            <h1 style="display: none"></h1>
             
             <div class="markdown-body">
-              <h1 id="前端加油站"><a href="#前端加油站" class="headerlink" title="前端加油站"></a>前端加油站</h1><h2 id="4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"><a href="#4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？" class="headerlink" title="4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"></a>4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？</h2><p><strong>同源策略?</strong></p>
-<p>同源策略是一种安全机制，限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互，这是一个用于隔离潜在恶意文件的重要机制。（可扩展到域、cookie、iframe、postmessage等细节） </p>
-<p>谁受约束? Cookie , Dom , 第三方插件以及 XMLHttpRequest 都受到同源策略的约束</p>
-<p>Cookie:</p>
-<p>只有同源的网页才能共享，但是若两个页面一级域名相同，只是二级域名不同，那么浏览器可以通过设置<code>document.domain</code>来共享 Cookie </p>
-<p>XMLHttpRequest</p>
-<p>它受到同源策略的约束，不能跨域访问资源，但是 W3C 委员会制定了 XMLHttpRequest 跨域访问标准。  通过目标返回的 HTTP 头来授权，是否允许跨域访问。实现这一点的安全基础是 JavaScript 无法控制 HTTP 头</p>
-<p><strong>为什么会有这样的策略(目的)</strong></p>
-<p>为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
-<p><strong>本地开发时如何独立解决接口跨域的问题(解决办法)</strong></p>
-<p>反向代理如 “配置nginx 与 host”、“webpack-dev-server proxy”，有理、可行即可<br>还可以延伸考察候选人对跨域请求和cookie配置等相关概念的掌握： 1、xhr.withCredentials = true; // 携带跨域cookie   fetch: credentials: “include”  2、服务器端使用CROS协议解决跨域访问数据问题时，需要设置响应消息头Access-Control-Allow-Credentials值为“true”。 同时，还需要设置响应消息头Access-Control-Allow-Origin值为域名或者通配符“*”</p>
+              <h1 id="练手项目记录"><a href="#练手项目记录" class="headerlink" title="练手项目记录"></a>练手项目记录</h1><h2 id="1-React实现计算器"><a href="#1-React实现计算器" class="headerlink" title="1. React实现计算器"></a>1. React实现计算器</h2><blockquote>
+<p>信息</p>
+</blockquote>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">Time:</span> 2021 09.01 - 09.02<br>name: 计算器<br>技术: <br></code></pre></td></tr></table></figure>
+<ol>
+<li>练习到state, props 等</li>
+</ol>
+<p>缺陷: 利用了eval()这个方法，这个方法是有害的</p>
+<h2 id="2-随机点名"><a href="#2-随机点名" class="headerlink" title="2. 随机点名"></a>2. 随机点名</h2><blockquote>
+<p>信息</p>
+</blockquote>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">Time:</span> 2021 09.03 - 09.04<br>name: 随机点名<br>技术: <br></code></pre></td></tr></table></figure>
+
+
+<ol>
+<li>react提示ach child in a list should have a unique “key” prop</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/2020060214421287.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>解决方法是在key={index} ,分配一个unique-key ,这个需要注意!</p>
+<h2 id="3-轮播图"><a href="#3-轮播图" class="headerlink" title="3. 轮播图"></a>3. 轮播图</h2><blockquote>
+<p>信息</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">Time: <span class="hljs-number">2021</span> <span class="hljs-number">09.04</span> - <br>name: 轮播图<br>技术: <br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>需求</p>
+</blockquote>
+<ol>
+<li>实现左右切换</li>
+<li>点击按钮切换</li>
+</ol>
+<blockquote>
+<p>问题</p>
+</blockquote>
+<ol>
+<li>react 中img 标签加载图片的问题?</li>
+<li>图片居中方法</li>
+<li>使用阴影</li>
+</ol>
+<h2 id="4-admin后台管理"><a href="#4-admin后台管理" class="headerlink" title="4. admin后台管理"></a>4. admin后台管理</h2><blockquote>
+<p>信息</p>
+</blockquote>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">Time:</span> 2021 09.06 - 09.13 <br>name: 后台管理<br>技术: <br></code></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>问题</p>
+</blockquote>
+<ol>
+<li>react-router-dom 中哈希路由</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 先引用哈希路由</span><br><br><span class="hljs-keyword">import</span> &#123;HashRouter&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-router-dom&#x27;</span><br><br><br><span class="hljs-comment">//在index.js中(不推荐)</span><br><br>&lt;Router&gt;<br>    &lt;Switch&gt;<br>      &lt;Router path=<span class="hljs-string">&quot;/login&quot;</span> component=&#123;Login&#125; /&gt;<br>      &lt;Router path=<span class="hljs-string">&quot;/admin/products&quot;</span> component=&#123;List&#125; /&gt;<br>    &lt;/Switch&gt;<br>  &lt;/Router&gt;<br>  <br><span class="hljs-comment">//配置路由文件,在src中配置routes文件</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>路由如何配置</li>
+</ol>
+<ol start="3">
+<li>左边导航栏如何动态生成</li>
+</ol>
+<ol start="4">
+<li>antd动态引入icon</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getIcon = <span class="hljs-function"><span class="hljs-params">string</span> =&gt;</span> &#123;<br>    <span class="hljs-keyword">return</span> &#123;<br>        AuditOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuditOutlined</span>/&gt;</span></span>,<br>        AppstoreAddOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AppstoreAddOutlined</span>/&gt;</span></span>,<br>        ContactsOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ContactsOutlined</span> /&gt;</span></span>,<br>        ControlOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ControlOutlined</span>/&gt;</span></span>,<br>        FormOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FormOutlined</span>/&gt;</span></span>,<br>        FileTextOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FileTextOutlined</span>/&gt;</span></span>,<br>        HighlightOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">HighlightOutlined</span>/&gt;</span></span>,<br>        ProfileOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ProfileOutlined</span>/&gt;</span></span>,<br>        TeamOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TeamOutlined</span>/&gt;</span></span>,<br>        TagsOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TeamOutlined</span>/&gt;</span></span>,<br>        CopyOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CopyOutlined</span>/&gt;</span></span>,<br>        CheckCircleOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CheckCircleOutlined</span>/&gt;</span></span>,<br>        ExclamationCircleOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ExclamationCircleOutlined</span>/&gt;</span></span>,<br>        BlockOutlined:<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">BlockOutlined</span>/&gt;</span></span><br>    &#125;[string]&#125;<br><br>&lt;MenuItem key=&#123;item.key&#125; icon=&#123;getIcon(item.icon)&#125;&gt;&#123;item.name&#125;&lt;/MenuItem&gt;<br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
-                    
-                  </div>
                 
               </div>
               
@@ -254,9 +297,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/20/%E6%A0%A1%E6%8B%9B100%E9%A2%98/">
+                      <a href="/2021/09/02/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">React的生命周期</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -264,8 +307,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/14/html-tupianfangda/">
-                        <span class="hidden-mobile">鼠标移上去图片放大</span>
+                      <a href="/2021/08/30/js%E5%86%8D%E7%8E%B0/">
+                        <span class="hidden-mobile">js再看</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

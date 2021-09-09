@@ -18,7 +18,7 @@
   <meta name="author" content="云边的鸟">
   <meta name="keywords" content="">
   
-  <title>前端加油站(长期更新) - 云边的鸟</title>
+  <title>React的生命周期 - 云边的鸟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="前端加油站(长期更新)">
+            <span class="h2" id="subtitle" title="React的生命周期">
               
             </span>
 
@@ -161,8 +161,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-17 16:23" pubdate>
-        2021年8月17日 下午
+      <time datetime="2021-09-02 22:26" pubdate>
+        2021年9月2日 晚上
       </time>
     </span>
   
@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      442 字
+      271 字
     </span>
   
 
@@ -183,7 +183,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      2
        分钟
     </span>
   
@@ -213,20 +213,36 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前端加油站(长期更新)</h1>
+            <h1 style="display: none">React的生命周期</h1>
             
             <div class="markdown-body">
-              <h1 id="前端加油站"><a href="#前端加油站" class="headerlink" title="前端加油站"></a>前端加油站</h1><h2 id="4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"><a href="#4-什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？" class="headerlink" title="4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？"></a>4. 什么是同源策略，为什么会有这样的策略？本地开发时如何独立解决接口跨域的问题？</h2><p><strong>同源策略?</strong></p>
-<p>同源策略是一种安全机制，限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互，这是一个用于隔离潜在恶意文件的重要机制。（可扩展到域、cookie、iframe、postmessage等细节） </p>
-<p>谁受约束? Cookie , Dom , 第三方插件以及 XMLHttpRequest 都受到同源策略的约束</p>
-<p>Cookie:</p>
-<p>只有同源的网页才能共享，但是若两个页面一级域名相同，只是二级域名不同，那么浏览器可以通过设置<code>document.domain</code>来共享 Cookie </p>
-<p>XMLHttpRequest</p>
-<p>它受到同源策略的约束，不能跨域访问资源，但是 W3C 委员会制定了 XMLHttpRequest 跨域访问标准。  通过目标返回的 HTTP 头来授权，是否允许跨域访问。实现这一点的安全基础是 JavaScript 无法控制 HTTP 头</p>
-<p><strong>为什么会有这样的策略(目的)</strong></p>
-<p>为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
-<p><strong>本地开发时如何独立解决接口跨域的问题(解决办法)</strong></p>
-<p>反向代理如 “配置nginx 与 host”、“webpack-dev-server proxy”，有理、可行即可<br>还可以延伸考察候选人对跨域请求和cookie配置等相关概念的掌握： 1、xhr.withCredentials = true; // 携带跨域cookie   fetch: credentials: “include”  2、服务器端使用CROS协议解决跨域访问数据问题时，需要设置响应消息头Access-Control-Allow-Credentials值为“true”。 同时，还需要设置响应消息头Access-Control-Allow-Origin值为域名或者通配符“*”</p>
+              <p>React的生命周期从创建到卸载经历以下三阶段:</p>
+<ul>
+<li>挂载阶段 - 组件实例被创建和插入Dom树的过程</li>
+<li>更新阶段 - 组件被重新渲染过程</li>
+<li>卸载阶段 - 组件从Dom树中被删除的过程</li>
+</ul>
+<h2 id="17-版本前生命周期"><a href="#17-版本前生命周期" class="headerlink" title="17 版本前生命周期"></a>17 版本前生命周期</h2><blockquote>
+<p>挂载阶段</p>
+</blockquote>
+<p>初始化操作， 如下几个钩子函数</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs delphi"><span class="hljs-keyword">static</span> defaultProps<br>	-- 设置props数据类型<br>	<br><span class="hljs-keyword">static</span> proTypes<br>	-- props数据类型检查<br>	<br><span class="hljs-function"><span class="hljs-keyword">constructor</span><span class="hljs-params">(props)</span></span><br><span class="hljs-function">	-- 构造函数</span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-title">componentWillMount</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	-- 组件前挂载前函数</span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-title">render</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	-- 组件更新钩子</span><br><span class="hljs-function"></span><br><span class="hljs-function"><span class="hljs-title">componentDidMount</span><span class="hljs-params">()</span></span><br><span class="hljs-function">	-- 组件挂载成功钩子, 该过程组件已经成功挂载到真实<span class="hljs-title">Dom</span>上</span><br><span class="hljs-function">	</span><br><span class="hljs-function">注意:</span> <span class="hljs-keyword">static</span> 静态方法不依赖构造函数, 只跟类有关, 可优先于构造函数执行<br></code></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>更新阶段</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">componentWillReceiveProps</span><span class="hljs-params">(newProps)</span></span><br>	-- 父组件更新props钩子<br><br><span class="hljs-function"><span class="hljs-title">shouldComponentUpdate</span><span class="hljs-params">()</span></span><br>	-- 组件是否更新钩子<br><br><span class="hljs-function"><span class="hljs-title">componentWillUpdate</span><span class="hljs-params">()</span></span><br>	-- 组件更新前钩子<br><br><span class="hljs-function"><span class="hljs-title">render</span><span class="hljs-params">()</span></span><br>	-- 组件渲染钩子<br>	<br><span class="hljs-function"><span class="hljs-title">componentDidUpdate</span><span class="hljs-params">()</span></span><br>	-- 组件更新成功钩子<br></code></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>卸载阶段</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">这个阶段主要从Dom树中删除组件操作, 它的钩子函数:<br><span class="hljs-function"><span class="hljs-title">componentWillUnmount</span><span class="hljs-params">()</span></span><br>	-- 组件将要被卸载的时候调用<br></code></pre></td></tr></table></figure>
+
+
+
+
 
             </div>
             <hr>
@@ -237,7 +253,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+                      <a class="hover-with-bg" href="/tags/React/">React</a>
                     
                   </div>
                 
@@ -254,9 +270,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/20/%E6%A0%A1%E6%8B%9B100%E9%A2%98/">
+                      <a href="/2021/09/03/C++%E6%97%A5%E8%AE%B0/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">C++日记</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -264,8 +280,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/14/html-tupianfangda/">
-                        <span class="hidden-mobile">鼠标移上去图片放大</span>
+                      <a href="/2021/09/01/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
