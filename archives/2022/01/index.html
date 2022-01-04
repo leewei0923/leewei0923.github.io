@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-       | 一叶扁舟
+      文章归档: 2022/1 | 一叶扁舟
     
   </title>
   <meta name="author" content="leewei">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			
+			文章归档
 		
 	</p>
 
@@ -178,52 +178,85 @@
 			
 		<!--main-->
 		<main>
-			<!--content start-->
-<div class="layout-page">	
-	<div class="layout-page-container">
-
-		<div class="layout-page-header">
+			<!--
+	时间：2018-11-08
+	描述：The archive module refers to 'https://1984n.win/archives-post/' & 'http://1900.live/one-theme/', include js、css. Relevant rights reserved by them! 
+-->
+<div class="layout-archive">
+    <div class="i-container">
+        <i class="fa fa-book i-tag">
+			<!--
+	Thec counter of post number  for archive.ejs.  
+-->
 
 	
-
-		
-
+	总计 1 文章
 	
-	
+
+		</i>
+    </div>
+
+    <!-- Archive by year, display in page( archive ) -->
+    <div id="layout-archive-year" style="display: 
+                 	
+            block">        
+        
+        
+        <ul>
+            
+                <li>
+                    <a href="/2022/01/04/hello-world/">
+            			<em year="2022">
+                            01-04
+                        </em>
+        			    <span itemprop="name">
+                            Hello World
+                        </span>
+        			    
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+     <!-- Archive by month, called by page( categories, tags... ) -->
+    <div id="layout-archive-month" style="display: 
+         
+            none"> 
+        
+
+        
+        
+            
+
+            
+                
+                <h3 class="archive-year">
+                    <!-- <a href="/archives/2022/01"> -->
+                    <a>
+                        2022 - 01
+                    </a>
+                </h3>
+            
+
+            <ul>
+                <li>
+                    <a href="/2022/01/04/hello-world/">
+                        <em>
+                            01-04
+                        </em>
+                        <span itemprop="name">
+                            Hello World
+                        </span>
+                               
+                    </a>
+                </li>
+            </ul>
+        
+    </div>
+
+    
 </div>
-
-		
-
-			<div>
-				<div class = "text-center"><h1>碎碎念</h1></div><div class = "text-tips">
-
-<p>tips：github登录后按时间正序查看、可点赞加❤️、本插件<a target="_blank" rel="noopener" href="https://github.com/removeif/gitalk">地址</a>..<span id="busuanzi_container_page_pv">「<span id="busuanzi_value_page_pv">+99</span>次查看」</span></div></p>
-<div id="comment-container1"><div class="text-tips">碎碎念加载中，请稍等...</div></div>
-<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"/>
-<script>
-    $.getScript("/js/gitalk_self.min.js", function () {
-        var title = location.pathname.substr(0, 50);
-        var gitalk = new Gitalk({
-            clientID: '0458cfc88b10a3354fbd',
-            clientSecret: 'a32d7d664626d75fb35e6ec3e812ec5726b5dab6',
-            id: title,
-            repo: 'blogtalk',
-            owner: 'leewei0923',
-            admin: 'leewei0923',
-            createIssueManually: true,
-            distractionFreeMode: false
-        });
-        gitalk.render('comment-container1');
-    });
-</script>
-			</div>
-
-		
-	</div>
-
-	
-</div>
-
 		</main>
 
 		<!--footer-->
