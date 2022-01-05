@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-       | 一叶扁舟
+      tag: 随笔 | 一叶扁舟
     
   </title>
   <meta name="author" content="leewei">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			
+			标签
 		
 	</p>
 
@@ -178,119 +178,110 @@
 			
 		<!--main-->
 		<main>
-			<!--content start-->
-<div class="layout-page">	
-	<div class="layout-page-container">
+			<!--
+	时间：2018-11-08
+	描述：The archive module refers to 'https://1984n.win/archives-post/' & 'http://1900.live/one-theme/', include js、css. Relevant rights reserved by them! 
+-->
+<div class="layout-archive">
+    <div class="i-container">
+        <i class="fa fa-book i-tag">
+			<!--
+	Thec counter of post number  for archive.ejs.  
+-->
 
-		<div class="layout-page-header">
-
+		 
 	
-
+	随笔 1 
 		
 
-	
-	
-</div>
-
-		
-
-			<div>
-				 
-
-<link rel="stylesheet" href="css/style.css">
-<body>
-    <div class="containerP">
-
-<div class="peronInfo">
-            <div class="avatar1">
-                <img src="img/my.jpg" alt="头像">
-            </div>
-            <div class="personInfoBox1">
-                <div class="icon">
-                    <img src="img/me.png">
-                    <span>江湖名称: 大伟</span>
-                </div>
-                <div class="icon">
-                    <img src="img/aixin.png">
-                    <span>破壳日: 2000</span>
-                </div>
-            </div>
-            <div class="personInfoBox2">
-                <div class="icon">
-                    <img src="img/dizhi.png">
-                    <span>常驻之地: China | 山东 | 青岛</span>
-                </div>
-                <div class="icon">
-                    <img src="img/jiayou.png">
-                    <span>目标语言: javaScript | Java | Python</span>
-                </div>
-            </div>
-        </div>
-        <div class="peronDetailBox">
-            <div class="skill">
-                <div>技能 | Skill</div>
-                <div class="skillBox">
-                    <div class="skillBox1">
-                        <div>Html/CSS</div>
-                        <div>JavaScript</div>
-                        <div>Python</div>
-                        <div>R</div>
-                        <div>ps/pr</div>
-                    </div>
-                    <div class="skillBox2">
-                        <div id="skillBox2Num0" name="skillBox2Num">30%</div>
-                        <div id="skillBox2Num1" name="skillBox2Num">40%</div>
-                        <div id="skillBox2Num2" name="skillBox2Num">100%</div>
-                        <div id="skillBox2Num3" name="skillBox2Num">20%</div>
-                        <div id="skillBox2Num4" name="skillBox2Num">10%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="introduction">
-                <div>简介 | Introduction</div>
-                <ul class="content">
-                    <li class="contentText">学历：本科</li>
-                    <li class="contentText">目标：前端工程师or全栈工程师</li>
-                    <li class="contentText">博客：技术积累，共享知识</li>
-                    <li class="contentText">兴趣：骑车，运动</li>
-                    <li class="contentText">其他：一只小菜鸟，一直努力飞</li>
-                </ul>
-            </div>
-        </div>
+		</i>
     </div>
-    <script>
-    function skillBoxProBar() {
-            console.log(proBarColor)
-            var skillBox2NumEle = document.getElementsByName("skillBox2Num"); //获取到Name标签下的值
-     var proBarColor = ["#52ACFF", "#FFE32C", "#FF2525", "#21D4FD", "#08AEEA"]; //创建颜色数组
-   //循环取值
-                for (var i = 0; i < skillBox2NumEle.length; i++) {
-                    var skillBox2NumEle2 = document.getElementById("skillBox2Num" + i); //获取name值为skillBox2Num,再找div的id
-                    var skillBox2NumEleHtml = skillBox2NumEle2.innerHTML;      //找到div中id 所对应的innnerHTML
-                    var skillBox2NumEleMath = parseInt(skillBox2NumEleHtml);   //获取到div中innerHTML,再进行String转为number
-                    var skillBox2NumEleOut = skillBox2NumEleMath / 100 * 150;  //对skillBox2NumEleMath进行计算,在200px的容器中,所占比例,生成相应大小的进度条
-   var proBarColorOut = skillBox2NumEle2.style.background = proBarColor[i];
-                    var progressBar = skillBox2NumEle2.style.width = skillBox2NumEleOut + "px";  //修改id所对应的style,对获取到的数值进行拼接,自动转换为String
-    // console.log(progressBar);
-    //                 console.log(proBarColorOut);
-                    }
 
-        }
- skillBoxProBar();
+    <!-- Archive by year, display in page( archive ) -->
+    <div id="layout-archive-year" style="display: 
+        
+        
+        <ul>
+            
+                <li>
+                    <a href="/2022/01/05/%E6%8E%A5%E5%8F%97%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E7%9A%84%E7%9B%AE%E7%9A%84/">
+            			<em year="2022">
+                            01-05
+                        </em>
+        			    <span itemprop="name">
+                            接受高等教育的目的什么
+                        </span>
+        			    
+                			<a href="/tags/%E9%9A%8F%E7%AC%94/" class="tag">
+                				随笔
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2022/01/04/hello-world/">
+            			<em year="2022">
+                            01-04
+                        </em>
+        			    <span itemprop="name">
+                            Hello World
+                        </span>
+        			    
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
 
-</script>
-</body>
+     <!-- Archive by month, called by page( categories, tags... ) -->
+    <div id="layout-archive-month" style="display: 
+         
+            block"> 
+        
 
- 
+        
+        
+            
 
-			</div>
+            
+                
+                <h3 class="archive-year">
+                    <!-- <a href="/archives/2022/01"> -->
+                    <a>
+                        2022 - 01
+                    </a>
+                </h3>
+            
 
-		
-	</div>
+            <ul>
+                <li>
+                    <a href="/2022/01/05/%E6%8E%A5%E5%8F%97%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E7%9A%84%E7%9B%AE%E7%9A%84/">
+                        <em>
+                            01-05
+                        </em>
+                        <span itemprop="name">
+                            接受高等教育的目的什么
+                        </span>
+                        
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/" class="tag">
+                                随笔
+                            </a>
+                               
+                    </a>
+                </li>
+            </ul>
+        
+    </div>
+
+    
+        
+	
 
 	
-</div>
 
+    
+</div>
 		</main>
 
 		<!--footer-->
